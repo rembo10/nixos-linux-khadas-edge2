@@ -21,14 +21,14 @@
         ];
       };
       linux_khadas_edges = pkgs.linuxManualConfig {
-        version = "5.10.66";
-        src = pkgs.fetchurl {
-          url = "https://github.com/khadas/linux/archive/refs/tags/khadas-edges-linux-5.10-v1.5-release.tar.gz";
-          sha256 = "0lrhl7bwg45l1l489ra4fbcvwwii645hsp7wqj9ijwhx1g05apz0";
+        version = "5.10.160";
+        src = pkgs.fetchzip {
+          url = "https://github.com/armbian/linux-rockchip/archive/99a6d693684e987cd843d6e9bf71ebcb55de51f0.zip";
+          hash = "sha256-Ncw+x84AwScG/aZtMndmDueBEopHtqO4+oqYgfWNd7U=";
         };
         configfile = ./config;
         kernelPatches = [
-          { name = "bcmdhd-sourcetree-fix"; patch = ./patches/bcmdhd-sourcetree-fix.patch; }
+        #  { name = "bcmdhd-sourcetree-fix"; patch = ./patches/bcmdhd-sourcetree-fix.patch; }
         ];
         allowImportFromDerivation = true;
       };
