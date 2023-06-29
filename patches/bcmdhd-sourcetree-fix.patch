@@ -1,13 +1,13 @@
 diff --git a/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/Makefile b/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/Makefile
-index 5b147c9..8c79708 100755
+index 5b147c9..a23e278 100755
 --- a/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/Makefile
 +++ b/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/Makefile
-@@ -276,7 +276,7 @@ endif
- endif
- 
- ARCH ?= arm64
--BCMDHD_ROOT = $(src)
-+BCMDHD_ROOT = $(srctree)/$(src)
+@@ -280,7 +280,7 @@ BCMDHD_ROOT = $(src)
  #$(warning "BCMDHD_ROOT=$(BCMDHD_ROOT)")
  EXTRA_CFLAGS = $(DHDCFLAGS)
  EXTRA_CFLAGS += -DDHD_COMPILED=\"$(BCMDHD_ROOT)\"
+-EXTRA_CFLAGS += -I$(BCMDHD_ROOT)/include/ -I$(BCMDHD_ROOT)/
++EXTRA_CFLAGS += -I$(srctree)/$(BCMDHD_ROOT)/include/ -I$(srctree)/$(BCMDHD_ROOT)/
+ ifeq ($(CONFIG_BCMDHD),m)
+ EXTRA_LDFLAGS += --strip-debug
+ endif
