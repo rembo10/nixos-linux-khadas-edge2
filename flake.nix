@@ -70,7 +70,7 @@
 
     in {
 
-      packages.x86_64-linux = {
+      pkgsCross.aarch64-multiplatform = {
         linux_khadas = linux_khadas;
         linux_armbian = linux_armbian;
       };
