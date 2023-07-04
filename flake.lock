@@ -16,9 +16,26 @@
         "type": "github"
       }
     },
+    "rk3588-implicit-sync": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1670310095,
+        "narHash": "sha256-fs4cTGS1mBIA3qW/Q6riW+RC9V/st+UdIASavfg00K4=",
+        "owner": "panfork",
+        "repo": "rk3588-implicit-sync",
+        "rev": "e3b9a56499d7f0a2ee8ce1fc99a111f85945534e",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "panfork",
+        "repo": "rk3588-implicit-sync",
+        "type": "gitlab"
+      }
+    },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "rk3588-implicit-sync": "rk3588-implicit-sync"
       }
     }
   },
